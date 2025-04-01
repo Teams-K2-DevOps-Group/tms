@@ -16,7 +16,7 @@
                     <a href="{{route('contact')}}" class="hover:underline me-4 md:me-6">Contact</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Sign Up</a>
+                    <a href="{{route('registration')}}" class="hover:underline me-4 md:me-6">Sign Up</a>
                 </li>
                 <li>
                     <a href="#" class="hover:underline me-4 md:me-6">Sign In</a>
