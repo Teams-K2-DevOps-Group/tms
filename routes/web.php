@@ -9,7 +9,7 @@ Route::view('/','index')->name('index');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
 
-Route::view('registration', 'registration')->name('registration');
+Route::view('auth/registration', 'auth/registration')->name('registration');
 
 Route::view('login','login')->name('login');
 Route::view('forgotenpassword','forgotenpassword')->name('forgotenpassword');
