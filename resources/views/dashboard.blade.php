@@ -330,7 +330,7 @@
         <div class="sidebar">
             <div class="logo">
                 <i class="fas fa-tasks"></i>
-                <span>TaskFlow</span>
+                <span>TMS Bolton</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -374,7 +374,7 @@
                     <input type="text" placeholder="Search tasks...">
                 </div>
                 <div class="user-profile">
-                    <div class="user-avatar">JD</div>
+                    <div class="user-avatar">NF</div>
                     <span>Nwekori Friday</span>
                 </div>
             </div>
@@ -462,7 +462,7 @@
                     </div>
                     
                     <div class="activity-item">
-                        <div class="activity-avatar">JD</div>
+                        <div class="activity-avatar">NF</div>
                         <div class="activity-details">
                             <div class="activity-message">You completed "Review design mockups"</div>
                             <div class="activity-time">2 hours ago</div>
@@ -470,15 +470,15 @@
                     </div>
                     
                     <div class="activity-item">
-                        <div class="activity-avatar">SM</div>
+                        <div class="activity-avatar">GN</div>
                         <div class="activity-details">
-                            <div class="activity-message">Sarah commented on your task</div>
+                            <div class="activity-message">Godstime commented on your task</div>
                             <div class="activity-time">4 hours ago</div>
                         </div>
                     </div>
                     
                     <div class="activity-item">
-                        <div class="activity-avatar">TM</div>
+                        <div class="activity-avatar">PN</div>
                         <div class="activity-details">
                             <div class="activity-message">Team meeting reminder</div>
                             <div class="activity-time">Yesterday</div>
