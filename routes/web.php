@@ -11,6 +11,6 @@ Route::view('contact','contact')->name('contact');
 
 Route::view('auth/registration', 'auth/registration')->name('registration');
 
-Route::view('login','login')->name('login');
+Route::view('auth/login','auth/login')->name('login');
 Route::view('forgotenpassword','forgotenpassword')->name('forgotenpassword');
 
