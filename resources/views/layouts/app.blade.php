@@ -24,7 +24,7 @@
         @endif
     </head>
    
-    <body>
+    <body style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.77)),url('{{asset('/imgs/home_banner.jpg')}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
         @include('partials.header')
         @yield('content')
            
