@@ -10,6 +10,9 @@ Route::view('/','index')->name('index');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
 
+Route::view('dashboard', 'dashboard')->name('dashboard');
+
+
 // Route::post('registration',[Registration::class,'store']);
 Route::post('auth/registration',[Registration::class,'store']);
 
