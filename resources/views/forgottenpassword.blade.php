@@ -108,20 +108,20 @@
    </div>
 <div class="left-side">
 <div class="form-container">
-            <h3 class="text-center" style="font-size:24px; color: #6B7CD2; font-weight:bold;">Login</h3><br />
+            <h3 class="text-center" style="font-size:24px; color: #6B7CD2; font-weight:bold;">Forgotten Passward</h3><br />
          <form action =" " method="POST"> 
-            <div class="mb-3"><label for="full_name" class="form-label">Please use your email as the username, then enter your password. or click on Forgotten password. <font style="color:#FE0505">Note: All fields with * are required.</font></label><br clear="all" /><br /></div>	
+            <div class="mb-3"><label for="full_name" class="form-label">Please ensure you enter the correct registered email to reset your password.</label><br clear="all" /><br /></div>	
                 <div class="mb-3">
-                    <label for="full_name" class="form-label">Username <font style="color:#FE0505">*</font></label>
+                    <label for="full_name" class="form-label">User Email <font style="color:#FE0505">*</font></label>
                     <input type="text" name="user_name" class="form-control" required>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password <font style="color:#FE0505">*</font></label>
-                    <input type="password" name="password" class="form-control" required>
+                <div class="mb-3">		
+                  <label for="password" class="form-label"><font style="color:#FE0505">Note:</font> All fields with <font style="color:#FE0505">*</font> are required. <br />or 
+Click on ‘Sign Up’ in the top right corner to create a new account.</label>                    
               </div>
 		<div class="mb-3"><br /></div>
-              <p style="text-align:center; padding:5px 0px;"> <button class="btn-submit">  Login </button> </p> <br />
-                <div class="mb-3" style="text-align:center;"><a href="{{route('forgottenpassword')}}" class="a">Forgotten password? <font style="color:#FE0505">Click here </font></a></div>
+              <p style="text-align:center; padding:5px 0px;"> <button class="btn-submit"> Reset Password </button> </p> <br />
+                <div class="mb-3" style="text-align:center;"><a href="{{route('login')}}" class="a"><font style="color: #6B7CD2;">Go back to Login?</font> <font style="color:#FE0505">Click here </font></a></div>
 		<div class="mb-3"><br clear="all" /><br /></div>
             </form>
         </div>
