@@ -9,24 +9,28 @@ use Illuminate\Support\Facades\Hash;
 
 class Registration extends Controller
 {
+
+    public function create(){
+        return view("auth.registration");
+    }
     public function store(Request $request)
     {
 
         $request->validate([
-            'name' =>   ['required','string','min:5','max:50'],
+            'fullname' =>   ['required','string','min:5','max:50'],
             'email' => ['required','string','email','max:60','unique:users'],
-            'studentId' => ['required','string','max:60','unique:users'],
+            'studentid' => ['required','string','max:7','unique:users'],
             'password' => ['required','min:8']
         ]);
         $validateUser = new User;
-        $validateUser->name = $request->name;
+        $validateUser->name = $request->fullname;
         $validateUser->email = $request->email;
-        $validateUser->studentId = $request->studentId;
+        $validateUser->studentId = $request->studentid;
         $validateUser->password = Hash::make($request->password);
         $result = $validateUser->save();
         if ($result) {
             Auth::login($validateUser);
-            return redirect()->route('index')->with("message","You have successfully register");
+            return redirect()->route('dashboard')->with("message","You have successfully register");
         } else {
             return back();
         }

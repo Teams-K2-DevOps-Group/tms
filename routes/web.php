@@ -11,9 +11,9 @@ Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
 
 // Route::post('registration',[Registration::class,'store']);
-Route::post('registration',[Registration::class,'store']);
+Route::post('auth/registration',[Registration::class,'store']);
 
-Route::view('auth/registration', 'auth/registration')->name('registration');
+Route::get('auth/registration',[Registration::class,'create'])->name('registration');
 
 Route::view('auth/login','auth/login')->name('login');
 Route::view('forgotenpassword','forgotenpassword')->name('forgotenpassword');
