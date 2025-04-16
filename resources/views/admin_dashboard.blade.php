@@ -193,7 +193,7 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="#" class="nav-link">
                         <i class="fas fa-home"></i>
                         <span>Dashboard</span>
                     </a>
@@ -215,29 +215,29 @@
                         <i class="fas fa-chart-pie"></i>
                         <span>Profile</span>
                     </a>
-
-                    
-                    <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-user-shield text-blue-600 text-2xl"></i>
+                </li>
+                
+                    <li>
+                    <a href="#" class="nav-link active" onclick="showManageAdmin()">
+                        <i class="fas fa-user"></i>
                         <span>Manage Admin</span>
                     </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                            </li>
 
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-cog"></i>
-                        <span>Settings</span>
-                    </a>
-
-                    </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fas fa-sign-out-alt text-2xl text-red-600"></i>
                         <span>Logout</span>
                     </a>
                 </li>
-            </ul>
+            </ul>            
         </div>
         
         <!-- Main Content -->
@@ -245,53 +245,88 @@
             <div class="header">
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search tasks...">
+                    <input type="text" placeholder="Search Projects...">
                 </div>
                 <div class="user-profile">
-                    <div class="user-avatar">NF</div>
-                    <span>Nwekori Friday</span>
+                    <div class="fas fa-user-shield text-blue-600 text-2xl"></div>
+                    <span>Add Admin</span>
                 </div>
             </div>
             
-            <!-- Stats Cards -->
-            <div class="stats-container">
-                <div class="stat-card total">
-                    <h3>Total Tasks</h3>
-                    <p>2</p>
-                </div>
-                <div class="stat-card completed">
-                    <h3>Completed</h3>
-                    <p>3</p>
-                </div>
-                <div class="stat-card pending">
-                    <h3>Pending</h3>
-                    <p>2</p>
-                </div>
-                <div class="stat-card overdue">
-                    <h3>Overdue</h3>
-                    <p>1</p>
-                </div>
-            </div>
-            
+    
            <!-- Stats Cards -->
            <div class="stats-container">
-                <div class="stat-card total">
-                    <h3>Total Project</h3>
-                    <p>2</p>
-                </div>
-                <div class="stat-card completed">
-                    <h3>Completed</h3>
-                    <p>3</p>
-                </div>
-                <div class="stat-card pending">
-                    <h3>Pending</h3>
-                    <p>2</p>
-                </div>
-                <div class="stat-card overdue">
-                    <h3>Overdue</h3>
-                    <p>1</p>
-                </div>
-            </div>
+                  
+<div id="manageAdminSection" class="hidden mt-6">
+    <h2 class="text-2xl font-bold mb-4">Manage Admin</h2>
+    <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-300 text-sm text-left">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="px-4 py-2 border">S/N</th>
+                    <th class="px-4 py-2 border">Name</th>
+                    <th class="px-4 py-2 border">Email</th>
+                    <th class="px-4 py-2 border">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hover:bg-gray-100">
+                    <td class="px-4 py-2 border">1</td>
+                    <td class="px-4 py-2 border">Friday</td>
+                    <td class="px-4 py-2 border">fen1crt@bolton.ac.uk</td>
+                    <td class="px-4 py-2 border">
+                        <label><input type="checkbox" class="mr-1">Edit</label>
+                        <label class="ml-3"><input type="checkbox" class="mr-1">Delete</label>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-100">
+                    <td class="px-4 py-2 border">2</td>
+                    <td class="px-4 py-2 border">Godstime</td>
+                    <td class="px-4 py-2 border">godstimeonye2@gmail.com</td>
+                    <td class="px-4 py-2 border">
+                        <label><input type="checkbox" class="mr-1">Edit</label>
+                        <label class="ml-3"><input type="checkbox" class="mr-1">Delete</label>
+                    </td>
+
+                </tr>
+                <tr class="hover:bg-gray-100">
+                    <td class="px-4 py-2 border">3</td>
+                    <td class="px-4 py-2 border">Paul</td>
+                    <td class="px-4 py-2 border">peninternational@ymail.com</td>
+                    <td class="px-4 py-2 border">
+                        <label><input type="checkbox" class="mr-1">Edit</label>
+                        <label class="ml-3"><input type="checkbox" class="mr-1">Delete</label>
+                    </td>
+
+                </tr>
+                <tr class="hover:bg-gray-100">
+                    <td class="px-4 py-2 border">4</td>
+                    <td class="px-4 py-2 border">Matthew</td>
+                    <td class="px-4 py-2 border">num1crt@bolton.ac.uk</td>
+                    <td class="px-4 py-2 border">
+                        <label><input type="checkbox" class="mr-1">Edit</label>
+                        <label class="ml-3"><input type="checkbox" class="mr-1">Delete</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 3. Add this JS script at the bottom of the body -->
+<script>
+    function showManageAdmin() {
+        const section = document.getElementById('manageAdminSection');
+        if (section.classList.contains('hidden')) {
+            section.classList.remove('hidden');
+            section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            section.classList.add('hidden');
+        }
+    }
+</script>
+
+           </div>
             
     <script>
         // Simple checkbox toggle functionality
