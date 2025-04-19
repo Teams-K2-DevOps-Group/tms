@@ -224,7 +224,7 @@
 
                     </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a  href="{{url('logout')}}"  class="nav-link">
                         <i class="fas fa-sign-out-alt text-2xl text-red-600"></i>
                         <span>Logout</span>
                     </a>
@@ -241,7 +241,7 @@
                 </div>
                 <div class="user-profile">
                     <div class="user-avatar">NF</div>
-                    <span>Nwekori Friday</span>
+                    <span>   <label>Hello, &nbsp; {{Auth::user()->name}} &nbsp; you are welcome.</label></span>
                 </div>
             </div>
             
