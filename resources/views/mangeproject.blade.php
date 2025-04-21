@@ -356,13 +356,13 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admindashboard')}}" class="nav-link">
                         <i class="fas fa-home"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="{{route('manageproject')}}" class="nav-link active">
                         <i class="fas fa-project-diagram text-teal-600 text-xl"></i>
                         <span>Project</span>
                     </a>

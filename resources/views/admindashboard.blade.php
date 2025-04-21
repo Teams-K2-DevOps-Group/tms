@@ -369,13 +369,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('manageproject')}}" class="nav-link">
                         <i class="fas fa-project-diagram text-teal-600 text-xl"></i>
                         <span>Project</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('taskstatus')}}" class="nav-link">
                         <i class="fas fa-list text-teal-600 text-xl"></i>
                         <span>Task</span>
                     </a>
@@ -387,30 +387,30 @@
                     </a>
                 </li>
                     <li>
-                    <a href="#" class="nav-link">
+                    <a href="{{route('manageadmin')}}" class="nav-link">
                         <i class="fas fa-user-shield"></i>
                         <span> Admin</span>
                     </a>
                         </li>
                     <li>
-                    <a href="#" class="nav-link">
+                    <a href="{{route('manageteam')}}" class="nav-link">
                         <i class="fas fa-users"></i>
                         <span> Team </span>
                     </a>
                         </li>
-                    <li><a href="#" class="nav-link">
+                    <li><a href="{{route('comment')}}" class="nav-link">
                         <i class="fas fa-comment"></i>
                         <span> Comment </span>
                     </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('settings')}}" class="nav-link">
                                 <i class="fas fa-cog"></i>
                                 <span>Settings</span>
                             </a>
                             </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('login')}}" class="nav-link">
                         <i class="fas fa-sign-out-alt"></i>
                         <span>Logout</span>
                     </a>
@@ -440,7 +440,7 @@
       	     <tr>
                     <td class="stat-card"><i class="fas fa-user-edit" style="font-size:4em;"></i> <br />Register </td>
 		    <td style="bacground:transparent; border:1px solid transparent; width:28px;">&nbsp;</td>
-                    <td class="stat-card" style="margin:12px"><i class="fas fa-project-diagram" style="font-size:4em;"></i> <br />Manage Project</td>
+                    <td class="stat-card" style="margin:12px"><a href="{{route('manageproject')}}"><i class="fas fa-project-diagram" style="font-size:4em;"></i> <br />Manage Project</a></td>
                 </tr>
 		<tr>
                     <td style="bacground:transparent; border:1px solid transparent; hieght:28px;">&nbsp;</td>
@@ -448,9 +448,9 @@
                     <td style="bacground:transparent; border:1px solid transparent; hieght:28px;">&nbsp;</td>
                 </tr>
 		<tr>
-                   <td class="stat-card"><i class="fas fa-user-shield" style="font-size:4em;"></i><br />Manage Admin</td>
+                   <td class="stat-card"><a href="{{route('manageadmin')}}"><i class="fas fa-user-shield" style="font-size:4em;"></i><br />Manage Admin</a></td>
 		    <td style="bacground:transparent; border:1px solid transparent; width:28px;">&nbsp;</td>
-                    <td class="stat-card"><i class="fas fa-list" style="font-size:4em;"></i> <br />View Tasks Status</td>
+                    <td class="stat-card"><a href="{{route('taskstatus')}}"<i class="fas fa-list" style="font-size:4em;"></i> <br />View Tasks Status</a></td>
                 </tr>
 		<tr>
                     <td style="bacground:transparent; border:1px solid transparent; hieght:28px;">&nbsp;</td>
@@ -458,9 +458,9 @@
                     <td style="bacground:transparent; border:1px solid transparent; hieght:28px;">&nbsp;</td>
                 </tr>
 		<tr>
-                    <td class="stat-card"><i class="fas fa-users" style="font-size:4em;"></i> <br />Manage Team</td>
+                    <td class="stat-card"><a href="{{route('manageteam')}}"><i class="fas fa-users" style="font-size:4em;"></i> <br />Manage Team</a></td>
 	            <td style="bacground:transparent; border:1px solid transparent; width:28px;">&nbsp;</td>
-                    <td class="stat-card" onclick="document.getElementById('id01').style.display='block';"><i class="fas fa-comment" style="font-size:4em;"></i> <br />Comment</td>
+                    <td class="stat-card" onclick="document.getElementById('id01').style.display='block';"><a href="{{route('comment')}}"><i class="fas fa-comment" style="font-size:4em;"></i> <br />Comment</a></td>
                 </tr>
             </tbody>
         </table>
