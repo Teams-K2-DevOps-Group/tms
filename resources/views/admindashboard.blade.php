@@ -363,7 +363,7 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="{{route('admindashboard')}}" class="nav-link active">
                         <i class="fas fa-home"></i>
                         <span>Dashboard</span>
                     </a>
