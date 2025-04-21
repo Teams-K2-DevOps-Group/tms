@@ -16,3 +16,7 @@ Route::view('manageproject','manageproject')->name('manageproject');
 Route::view('manageadmin','manageadmin')->name('manageadmin');
 Route::view('manageteam','manageteam')->name('manageteam');
 Route::view('comment','comment')->name('comment');
+Route::view('taskstatus','taskstatus')->name('taskstatus');
+Route::view('managingproject','managingproject')->name('managingproject');
+Route::view('managingtask','managingtask')->name('managingtask');
+Route::view('managingprofile','managingprofile')->name('managingprofile');

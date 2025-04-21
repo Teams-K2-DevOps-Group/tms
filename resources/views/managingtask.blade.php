@@ -141,7 +141,18 @@
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        
+        .btn-submit {
+        background-color: #6B7CD2; /* Green color */
+        color: white;
+        border: none;
+        justify-content: center;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 10px 20px 10px 30px;
+        margin: 5px;
+        transition: background-color 0.3s ease-in-out;
+        }
         .stat-card {
             background: white;
             padding: 1.5rem;
@@ -229,18 +240,7 @@
             padding: 1rem 0;
             border-bottom: 1px solid #eee;
         }
-        .btn-submit {
-        background-color: #6B7CD2; /* Green color */
-        color: white;
-        border: none;
-        justify-content: center;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-        padding: 10px 20px 10px 30px;
-        margin: 5px;
-        transition: background-color 0.3s ease-in-out;
-        }
+        
         .task-item:last-child {
             border-bottom: none;
         }
@@ -388,7 +388,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('managingtask')}}" class="nav-link">
+                    <a href="{{route('managingtask')}}" class="nav-link active">
                         <i class="fas fa-tasks"></i>
                         <span>Task</span>
                     </a>
@@ -400,7 +400,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('settings')}}" class="nav-link active">
+                    <a href="{{route('settings')}}" class="nav-link">
                         <i class="fas fa-cog"></i>
                         <span>Settings</span>
                     </a>
@@ -429,24 +429,39 @@
             <!-- Tasks and Activity -->
             <div class="tasks-container">
 		<div class="task-list">
-                  <div class="title">Settings</div>
 		<form action =" " method="POST"> 
-		<div class="form-label" style="margin:-20px 0px 25px 0px; color:#6B7CD2">Please ensure you enter the correct old password to update to the new password. <font style="color:#FE0505">Note: </font>All fields with <font style="color:#FE0505">*</font>are required. <br claer="all" /></div>
+                  <div class="title">Managing Task</div>
+		    <div class="form-label" style="margin:-20px 0px 25px 0px; color:#6B7CD2">Please ensure you fill out the form properly and note that all fields marked with <font style="color:#FE0505">*</font> are required. <br claer="all" /></div>
+
 		    <div class="input-wrapper">
-                    <label for="full_name" class="form-label">Old Password<font style="color:#FE0505">*</font></label>
-			<i class="fa fa-key"></i>
-                       <input type="text" name="old_pass" class="form-control" required>
+                    <label for="full_name" class="form-label">Task Name <font style="color:#FE0505">*</font></label>
+			<i class="fas fa-tasks"></i>
+                       <input type="text" name="task_name" class="form-control" required>
                     </div>
 
 		    <div class="input-wrapper">
-                    <label for="full_name" class="form-label">New Password<font style="color:#FE0505">*</font></label>
-			<i class="fa fa-lock"></i>
-			<input type="text" name="new_pass" class="form-control" required>
+                    <label for="full_name" class="form-label">Description<font style="color:#FE0505">*</font></label>
+			<i class="fa fa-clipboard-list"></i>
+			<textarea rows="5" name="task_desc" class="form-control" required></textarea>
                     </div>
-		    <div class="mb-3"><br /></div>
-              <p style="text-align:center; padding:5px 0px;"> <button class="btn-submit" style="width:120px !important;">  Update </button> &nbsp; <input type="reset" style="width:120px !important;" class="btn-submit" value="Cancel" /></p> <br />            
-		</form>          
-
+		    <div class="input-wrapper">
+                    <label for="full_name" class="form-label">Asign To <font style="color:#FE0505">*</font></label>
+			<i class="fa fa-user"></i>
+                       <input type="text" name="task_asignto" class="form-control" required>
+                    </div>
+		    <div class="input-wrapper">
+                    <label for="full_name" class="form-label">Date <font style="color:#FE0505">*</font></label>
+			<i class="fa fa-calendar-alt"></i>
+                       <input type="date" name="task_date" class="form-control" required>
+                    </div>		
+		    <div class="input-wrapper">
+                    <label for="full_name" class="form-label">Date <font style="color:#FE0505">*</font></label>
+			<i class="fa fa-calendar-check"></i>
+                       <input type="date" name="task_deadline" class="form-control" required>
+                    </div>
+		<div class="mb-3"><br /></div>
+              <p style="text-align:center; padding:5px 0px;"> <button class="btn-submit" style="width:120px !important;">  Create </button> &nbsp; <input type="reset" style="width:120px !important;" class="btn-submit" value="Cancel" /></p> <br />            
+		</form>
             </div>
         </div>
     </div>

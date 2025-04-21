@@ -381,7 +381,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('managingprofile')}}" class="nav-link">
                         <i class="fas fa-chart-pie"></i>
                         <span>Profile</span>
                     </a>
@@ -450,7 +450,7 @@
 		<tr>
                    <td class="stat-card"><a href="{{route('manageadmin')}}"><i class="fas fa-user-shield" style="font-size:4em;"></i><br />Manage Admin</a></td>
 		    <td style="bacground:transparent; border:1px solid transparent; width:28px;">&nbsp;</td>
-                    <td class="stat-card"><a href="{{route('taskstatus')}}"<i class="fas fa-list" style="font-size:4em;"></i> <br />View Tasks Status</a></td>
+                    <td class="stat-card"><a href="{{route('taskstatus')}}"><i class="fas fa-list" style="font-size:4em;"></i> <br />View Tasks Status</a></td>
                 </tr>
 		<tr>
                     <td style="bacground:transparent; border:1px solid transparent; hieght:28px;">&nbsp;</td>
