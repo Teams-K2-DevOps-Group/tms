@@ -356,55 +356,55 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admindashboard')}}" class="nav-link">
                         <i class="fas fa-home"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('manageproject')}}" class="nav-link">
                         <i class="fas fa-project-diagram text-teal-600 text-xl"></i>
                         <span>Project</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="{{route('taskstatus')}}" class="nav-link active">
                         <i class="fas fa-list text-teal-600 text-xl"></i>
                         <span>Task</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('managingprofile')}}" class="nav-link">
                         <i class="fas fa-chart-pie"></i>
                         <span>Profile</span>
                     </a>
                 </li>
                     <li>
-                    <a href="#" class="nav-link">
+                    <a href="{{route('manageadmin')}}" class="nav-link">
                         <i class="fas fa-user-shield"></i>
                         <span> Admin</span>
                     </a>
                         </li>
                     <li>
-                    <a href="#" class="nav-link">
+                    <a href="{{route('manageteam')}}" class="nav-link">
                         <i class="fas fa-users"></i>
                         <span> Team </span>
                     </a>
                         </li>
                         </li>
-                    <li><a href="#" class="nav-link">
+                    <li><a href="{{route('comment')}}" class="nav-link">
                         <i class="fas fa-comment"></i>
                         <span> Comment </span>
                     </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('settings')}}" class="nav-link">
                                 <i class="fas fa-cog"></i>
                                 <span>Settings</span>
                             </a>
                             </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('login')}}" class="nav-link">
                         <i class="fas fa-sign-out-alt"></i>
                         <span>Logout</span>
                     </a>

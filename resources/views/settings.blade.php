@@ -376,7 +376,7 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="{{route('admindashboard')}}" class="nav-link">
+                    <a href="#" class="nav-link active">
                         <i class="fas fa-home"></i>
                         <span>Dashboard</span>
                     </a>
@@ -400,7 +400,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('settings')}}" class="nav-link active">
+                    <a href="{{route('settings')}}" class="nav-link">
                         <i class="fas fa-cog"></i>
                         <span>Settings</span>
                     </a>
