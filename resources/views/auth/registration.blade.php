@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{csrf_token()}}">
-        <title>{{config('app.name')}} :: @yield('title')</title>
+
+        <title>TMS</title>
 
          <!-- Favicon -->
         <link href="{{asset('imgs/favicon.png')}}" rel="icon">
@@ -24,12 +25,67 @@
         @endif
     </head>
    
-    <body style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.77)),url('{{asset('/imgs/home_banner.jpg')}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-        @include('partials.header')
-        @yield('content')
-           
+    <body>
+<main class="h-svh">
 
-       @include('partials.footer')
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="p-8 hidden md:block">
+            <div class="box-border bg-blue-400 rounded-lg text-white flex justify-center items-center" style="min-height: 90vh">
+                <img class="h-auto max-w-full rounded-lg" src="{{asset('imgs/reg_banna.png')}}" alt="">
+            </div>
+        </div>
+        <section>
+            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+                <div class="w-full rounded-lg md:mt-0 sm:max-w-md xl:p-0">
+                    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <h1 class="text-xl text-gray-900 font-bold">Get Started Now</h1>
+                        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                            Sign up to your account
+                        </h1>
+                        <form class="space-y-4 md:space-y-6" action="registration" method="post">
+                            @csrf
+                            <div>
+                                <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                                <input type="text" name="fullname" id="fullname" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Bob Doe" required="">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="user1crt@bolton.ac.uk" required="">
+                            </div>
+                            <div>
+                                <label for="studentid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Student ID</label>
+                                <input type="text" name="studentid" id="studentid" placeholder="2424000" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                            </div>
+                            <div>
+                                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                            </div>
+                            <div class="flex items-start mb-5">
+                                <div class="flex items-center h-5">
+                                  <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:focus:ring-blue-600" required />
+                                </div>
+                                <label for="terms" class="ms-2 text-sm font-medium text-gray-900">I agree with the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a></label>
+                              </div>
+                              <button type="submit" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Register new account</button>
+                            <p class="text-sm font-light text-gray-500">
+                                Do you have an account? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                            </p>
+                        </form>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+          </section>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </html>

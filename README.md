@@ -50,9 +50,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 You're ready to go! :) <br>
 Don't forget to star the project :)
+
 Thank you!!!. 🙌🏼
-
-
-commit from forgotenpassword
-line from commit to develop branch
 
