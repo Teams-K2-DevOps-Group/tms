@@ -11,6 +11,7 @@ Route::view('/','index')->name('index');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
 
+
 Route::view('dashboard', 'dashboard')->name('dashboard');
 
 
@@ -22,5 +23,4 @@ Route::get('auth/registration',[Registration::class,'create'])->name('registrati
 Route::get('auth/login',[Login::class,'create'])->name('login');
 Route::post('auth/login',[Login::class,'login']);
 Route::view('forgotenpassword','forgotenpassword')->name('forgotenpassword');
-
 
