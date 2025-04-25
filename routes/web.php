@@ -23,6 +23,5 @@ Route::get('auth/login',[Login::class,'create'])->name('login');
 Route::post('auth/login',[Login::class,'login']);
 Route::view('forgotenpassword','forgotenpassword')->name('forgotenpassword');
 
+
 Route::get('/logout',[Login::class,'logout']);
-
-
