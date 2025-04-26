@@ -384,21 +384,27 @@
                 <li class="nav-item">
                     <a href="{{route('managingproject')}}" class="nav-link">
                         <i class="fas fa-project-diagram"></i>
-                        <span>Project</span>
+                        <span>Create Project</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link">
-                        <i class="fas fa-tasks"></i>
-                        <span>Task</span>
+                        <i class="fas fa-folder-open"></i>
+                        <span>View Project</span>
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{route('managingtask')}}" class="nav-link">
+                        <i class="fas fa-tasks"></i>
+                        <span>View Tasks</span>
+                    </a>
+                </li>
+                {{-- <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="fas fa-user-alt"></i>
                         <span>Profile</span>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="fas fa-cog"></i>
