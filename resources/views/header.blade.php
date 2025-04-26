@@ -413,11 +413,11 @@
                 <li class="nav-item">
                     <a href="{{route('viewproject')}}" class="nav-link">
                         <i class="fas fa-folder-open"></i>
-                        <span>View Project</span>
+                        <span>View Projects</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('managingtask')}}" class="nav-link">
+                    <a href="{{route('view_task')}}" class="nav-link">
                         <i class="fas fa-tasks"></i>
                         <span>View Tasks</span>
                     </a>
