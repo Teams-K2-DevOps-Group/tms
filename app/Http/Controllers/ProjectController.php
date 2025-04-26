@@ -45,4 +45,15 @@ class ProjectController extends Controller
 
         return view('projectlist', compact('projects'));
     }
+
+    
+     public function creatTask(Project $project){
+        
+            return view('managingtask', [
+                'project_id' => $project->id,
+                'project_slug' => $project->slug
+            ]);
+        
+        }
+    
 }

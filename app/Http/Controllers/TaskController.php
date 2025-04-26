@@ -38,6 +38,16 @@ class TaskController extends Controller
         } else {
             return back();
         }
+    }
 
+    // public function viewTask()
+    // {
+    //     $tasks = Task::where('user_id', $task->user_id = Auth::id())->get();
+    //     return view('view_task', compact('tasks'));
+    // }
+    public function viewTask()
+    {
+        $tasks = Task::where('user_id', Auth::id())->get();
+        return view('view_task', compact('tasks'));
     }
 }

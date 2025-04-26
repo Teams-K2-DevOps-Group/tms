@@ -26,10 +26,15 @@ class DashboardController extends Controller
         // $project = Project::where('user_id', Auth::id())->first();
     }
 
-    public function creatTask(Request $request){
-        $project_id = $request->query('project_id'); 
-        // return view('managingtask');
-        return view('managingtask', compact('project_id'));
-    }
+    // public function creatTask(Project $project){
+    //     // $project_id = $request->query('project_id'); 
+    //     // return view('managingtask');
+    //     // return view('managingtask', compact('project_id'));
+    //     return view('managingtask', [
+    //         'project_id' => $project->id,
+    //         'project_slug' => $project->slug
+    //     ]);
+    
+    // }
 
 }

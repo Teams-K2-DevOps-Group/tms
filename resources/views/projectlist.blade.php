@@ -5,8 +5,6 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      {{-- <th>Start Date</th>
-      <th>Stop Date</th> --}}
       <th>Status</th>
       <th>Action</th>
     </tr>
@@ -18,7 +16,7 @@
       <td>{{ $project->name }}</td>
       <td >{{ Str::words($project->description, 10, '...')  }}</td>
       <td >{{ $project->status }}</td>
-      <td><a class="btn bg-yellow-800" href="{{ route('managingtask', ['project_id' => $project->id]) }}">Create Task</a>
+      <td><a class="btn bg-yellow-800" href="{{ route('managingtask', ['project' => $project->slug]) }}">Create Task</a>
       </td>
     </tr>
     @endforeach
