@@ -87,6 +87,29 @@
             background-color: var(--primary);
         }
         
+        table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #4361ee;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
         /* Main Content Styles */
         .main-content {
             padding: 2rem;
@@ -388,7 +411,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('viewproject')}}" class="nav-link">
                         <i class="fas fa-folder-open"></i>
                         <span>View Project</span>
                     </a>
