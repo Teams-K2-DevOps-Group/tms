@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\auth\Registration;
 use App\Http\Controllers\auth\Login;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProjectController;
 
 // Route::get('/', function () {
 //     return view('index');
@@ -11,7 +13,10 @@ Route::view('/','index')->name('index');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
 
-Route::view('dashboard', 'dashboard')->name('dashboard');
+// Route::view('dashboard', 'dashboard')->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth') ->name('dashboard');
+Route::get('/managingproject', [DashboardController::class, 'creatProject'])->middleware('auth')->name('managingproject');
+Route::post('/storeProject', [ProjectController::class, 'saveProject'])->middleware('auth')->name('storeProject');
 
 
 // Route::post('registration',[Registration::class,'store']);
