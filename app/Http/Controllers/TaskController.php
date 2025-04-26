@@ -20,6 +20,7 @@ class TaskController extends Controller
             'email' => ['required','string','email'],
             'startdate' => ['required'],
             'deadline' => ['required'],
+            'task_project_id' => ['required', 'exists:projects,id']
         ]);
         $task = new Task;
         $task->name = $request->taskname;
@@ -29,6 +30,7 @@ class TaskController extends Controller
         $task->deadline = date('Y-m-d', strtotime($request->deadline));
         $task->status = 'pending';
         $task->user_id = $user->id;
+        $task->task_project_id = $request->task_project_id;
         $task->slug = Task::generateSlug();
         $result = $task->save();
         if ($result) {

@@ -5,7 +5,7 @@
 		<form action="{{ route('storeTask') }}" method="POST"> 
             @csrf
                   <div class="title">Create Task</div>
-
+                  <input type="hidden" name="task_project_id" value="{{ $project_id }}">
 
 		    <div class="input-wrapper">
                     <label for="full_name" class="form-label">Task Name <label style="color:#FE0505">*</label></label>
