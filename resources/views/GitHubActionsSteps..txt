@@ -1,0 +1,21 @@
+STEP BY STEP ON HOW TO SETUP GITHUB ACTIONS
+1. Sign up and login to GitHub.
+2. Create a new repository (or use the old one).
+3. In the repo, create a folder (or select from the options) with .GitHub/workflows
+4. In the folder, create YAML file with.yaml extension (We can check for yaml file online).
+5. Add the content of the workflows in the file.
+6. Commit and push the changes.
+7. Goto repo Main page and click "Actions" tab.
+8. Select the workflowsfrom the left sidebar and check the logs and results.
+
+Some TERMS
+1. Workflow - collection of jobs, defined in a yaml file 
+    name: 
+2. Events - Any activity in the repo that can trigger a workflow 
+    on:
+3. Jobs - Collection of steps.
+    jobs:
+4. Steps - Actions to be taken, commands, scripts
+    steps:
+5. Chain jobs   
+    needs: 

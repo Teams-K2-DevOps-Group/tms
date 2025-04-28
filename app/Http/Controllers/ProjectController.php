@@ -38,4 +38,22 @@ class ProjectController extends Controller
         }
 
     }
+
+    public function viewProject()
+    {
+        $projects = Auth::user()->projects;
+
+        return view('projectlist', compact('projects'));
+    }
+
+    
+     public function creatTask(Project $project){
+        
+            return view('managingtask', [
+                'project_id' => $project->id,
+                'project_slug' => $project->slug
+            ]);
+        
+        }
+    
 }

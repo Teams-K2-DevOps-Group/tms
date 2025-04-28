@@ -87,6 +87,29 @@
             background-color: var(--primary);
         }
         
+        table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #4361ee;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
         /* Main Content Styles */
         .main-content {
             padding: 2rem;
@@ -384,21 +407,27 @@
                 <li class="nav-item">
                     <a href="{{route('managingproject')}}" class="nav-link">
                         <i class="fas fa-project-diagram"></i>
-                        <span>Project</span>
+                        <span>Create Project</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('viewproject')}}" class="nav-link">
+                        <i class="fas fa-folder-open"></i>
+                        <span>View Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('view_task')}}" class="nav-link">
                         <i class="fas fa-tasks"></i>
-                        <span>Task</span>
+                        <span>View Tasks</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="fas fa-user-alt"></i>
                         <span>Profile</span>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="fas fa-cog"></i>

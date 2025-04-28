@@ -23,4 +23,8 @@ class Project extends Model
             $project->slug = Str::slug($project->name . '-' . Str::random(6));
         });
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
