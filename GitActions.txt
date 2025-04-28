@@ -32,14 +32,14 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1' 
+        php-version: '8.2' 
         extensions: mbstring, bcmath, mysql
         coverage: none
 
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
-    - name: Update composer
+    - name: Update Composer
     - run: composer update
 
     - name: Install Dependencies
