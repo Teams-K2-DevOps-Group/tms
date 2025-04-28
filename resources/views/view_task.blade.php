@@ -1,5 +1,5 @@
 @include('header')
-<h2 class="py-5">List of Project</h2>
+<h2 class="py-5">List of Tasks</h2>
   <table>
     <thead>
     <tr>
