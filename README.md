@@ -53,5 +53,5 @@ Don't forget to star the project :)
 
 Thank you!!!. 🙌🏼
 
-echo "Test CI/CD pipeline" >> README.md
+echo "Test CI/CD pipeline" >> READM
 
