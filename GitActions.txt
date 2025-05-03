@@ -61,7 +61,7 @@ jobs:
         DB_PORT: 3306
         DB_DATABASE: tms
         DB_USERNAME: root
-        DB_PASSWORD: 
+        DB_PASSWORD: ''
       run: php artisan migrate --force
 
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
@@ -71,5 +71,5 @@ jobs:
         DB_PORT: 3306
         DB_DATABASE: tms
         DB_USERNAME: root
-        DB_PASSWORD: 
+        DB_PASSWORD: ''
       run: php artisan test
