@@ -45,4 +45,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public static function generateSlug()
+    {
+        return uniqid(time());
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }
