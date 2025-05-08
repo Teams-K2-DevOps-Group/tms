@@ -7,7 +7,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TaskController;
 
-oute::view('/','index')->name('index');
+
+Route::view('/','index')->name('index');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
 
