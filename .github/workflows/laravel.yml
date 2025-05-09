@@ -73,7 +73,7 @@ jobs:
     steps:
       - name: Trigger HTTP deploy
         run: |
-          curl -X POST http://ec2-18-204-206-67.compute-1.amazonaws.com/deploy.php \
+          curl -X POST http://ec2-54-163-192-164.compute-1.amazonaws.com/deploy.php \
             -H "Authorization: Bearer ${{ secrets.DEPLOY_TOKEN }}"
 
 
