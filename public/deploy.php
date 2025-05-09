@@ -2,11 +2,9 @@
 require __DIR__ . '/vendor/autoload.php';
 use Dotenv\Dotenv;
 
-// Load environment variables
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// Validate token
 $expectedToken = $_ENV['DEPLOY_WEBHOOK_TOKEN'] ?? '';
 $authHeader = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
 
@@ -16,7 +14,9 @@ if ($authHeader !== 'Bearer ' . $expectedToken) {
     exit;
 }
 
-// Deployment commands
 $output = [];
-exec('cd /var/www/tms && git pull origin main && composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan config:cache && php artisan route:cache', $output);
+exec('cd /var/www/tms && git pull origin main && composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:clear', $output);
+
+// Log output
+file_put_contents('/tmp/deploy.log', implode("\n", $output));
 echo implode("\n", $output);
