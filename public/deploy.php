@@ -23,7 +23,7 @@ try {
     }
 
     $output = [];
-    exec('cd /var/www/tms && git pull origin main && composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:clear 2>&1', $output);
+    exec('cd /var/www/tms && git pull origin main && git add . && git commit -m "Deploy from GitHub Actions" && git push origin main && composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:clear 2>&1', $output);
 
     file_put_contents($logfile, implode("\n", $output) . "\n", FILE_APPEND);
     echo implode("\n", $output);
