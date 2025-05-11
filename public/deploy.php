@@ -27,9 +27,9 @@ try {
     file_put_contents($logfile, "[Step 4] Authorization OK. Starting deployment...\n", FILE_APPEND);
     $output = [];
 
-    // Pull latest changes from GitHub
-    exec('cd /var/www/tms && git reset --hard HEAD && git pull origin main 2>&1', $output);
-    file_put_contents($logfile, "[Git Pull Output]\n" . implode("\n", $output) . "\n", FILE_APPEND);
+    // Pull latest changes from GitHub using safe reset
+    exec('cd /var/www/tms && git fetch origin main && git reset --hard origin/main 2>&1', $output);
+    file_put_contents($logfile, "[Git Sync Output]\n" . implode("\n", $output) . "\n", FILE_APPEND);
 
     // Install dependencies
     $output = [];
