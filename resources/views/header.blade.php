@@ -395,7 +395,7 @@
         <div class="sidebar">
             <div class="logo">
                 <i class="fas fa-tasks"></i>
-                <span>TMS Bolton</span>
+                <span>TMS</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
