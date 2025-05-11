@@ -61,6 +61,10 @@ jobs:
 
       - name: Run migrations
         run: php artisan migrate
+      - name: Prepare storage and cache
+        run: |
+          mkdir -p storage/framework/{cache,sessions,views}
+          mkdir -p bootstrap/cache
 
       - name: Run tests
         run: php artisan test
