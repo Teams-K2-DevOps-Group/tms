@@ -8,7 +8,7 @@
         <div class="py-8 px-8 box-border md:py-1 text-white">
             <h1 class="pt-8 pb-3 text-4xl font-extrabold">Task Manager</h1>
             <div class="">
-                <h1 class="text-4xl font-bold py-2" style="color: skyblue;">Stay Organized, Stay Productive</h1> 
+                <h1 class="text-4xl font-bold py-2" style="color: yellow;">Stay Organized, Stay Productive</h1> 
                 <p>Efficiently manage your tasks and boost your productivity.
                     Corporis earum dolorem iste omnis, id sit Repellendus, obcaecati quam.
                 </p>
