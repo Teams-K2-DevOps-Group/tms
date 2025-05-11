@@ -23,30 +23,31 @@ try {
     }
 
     $output = [];
-    exec('cd /var/www/tms && git pull origin main && git add . && git commit -m "Deploy from GitHub Actions" && git push origin main', $output);
+
+    // Pull latest changes from GitHub
+    exec('cd /var/www/tms && git reset --hard HEAD && git pull origin main 2>&1', $output);
     file_put_contents($logfile, implode("\n", $output) . "\n", FILE_APPEND);
 
-    exec('composer install --no-dev --optimize-autoloader', $output);
+    // Install dependencies
+    exec('cd /var/www/tms && composer install --no-dev --optimize-autoloader 2>&1', $output);
     file_put_contents($logfile, implode("\n", $output) . "\n", FILE_APPEND);
 
-    exec('php artisan migrate --force', $output);
+    // Run migrations
+    exec('cd /var/www/tms && php artisan migrate --force 2>&1', $output);
     file_put_contents($logfile, implode("\n", $output) . "\n", FILE_APPEND);
 
-    // Clear and cache the configuration, routes, and views
-    exec('php artisan config:cache', $output);
+    // Clear and cache configs
+    exec('cd /var/www/tms && php artisan config:cache 2>&1', $output);
+    exec('cd /var/www/tms && php artisan route:cache 2>&1', $output);
+    exec('cd /var/www/tms && php artisan view:clear 2>&1', $output);
     file_put_contents($logfile, implode("\n", $output) . "\n", FILE_APPEND);
 
-    exec('php artisan route:cache', $output);
-    file_put_contents($logfile, implode("\n", $output) . "\n", FILE_APPEND);
-
-    exec('php artisan view:clear', $output);
-    file_put_contents($logfile, implode("\n", $output) . "\n", FILE_APPEND);
-
-    exec('chmod -R 775 /var/www/tms/storage /var/www/tms/bootstrap/cache', $output);
-    exec('chown -R apache:apache /var/www/tms/storage /var/www/tms/bootstrap/cache', $output);
+    // Set correct permissions
+    exec('chmod -R 775 /var/www/tms/storage /var/www/tms/bootstrap/cache 2>&1', $output);
+    exec('chown -R apache:apache /var/www/tms/storage /var/www/tms/bootstrap/cache 2>&1', $output);
 
     file_put_contents($logfile, "=== Deployment completed successfully ===\n", FILE_APPEND);
-    echo implode("\n", $output);
+    echo "Deployment successful.";
 } catch (Throwable $e) {
     file_put_contents($logfile, "ERROR: " . $e->getMessage() . "\n", FILE_APPEND);
     http_response_code(500);
